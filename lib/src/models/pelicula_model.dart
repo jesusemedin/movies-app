@@ -50,7 +50,7 @@ class Pelicula {
   });
 
   Pelicula.fromJsonMap( Map<String, dynamic> json ){
-    popularity        = json['popularity'];
+    popularity        = json['popularity'] / 1;
     id                = json['id'];
     video             = json['video'];
     voteCount         = json['vote_count'];
@@ -76,5 +76,13 @@ class Pelicula {
     }
   }
 
+  getBackgroundImg(){
+
+    if (posterPath == null) {
+      return 'https://wallpaperaccess.com/full/343670.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    }
+  }
 
 }
