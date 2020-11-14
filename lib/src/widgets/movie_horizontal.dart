@@ -77,6 +77,7 @@ class MovieHorizontal extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   List<Widget> _tarjetas(BuildContext context){
     return peliculas.map((pelicula) => Container(
         margin: EdgeInsets.only(right: 15.0),
